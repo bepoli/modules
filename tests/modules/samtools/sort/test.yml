@@ -6,3 +6,14 @@
   files:
     - path: output/samtools/test.sorted.bam
       md5sum: f00f5d392fd5c531e1fd528d9f57b32b
+
+- name: samtools sort csi
+  command: nextflow run ./tests/modules/samtools/sort -entry test_samtools_sort_csi -c ./tests/config/nextflow.config -c ./tests/modules/samtools/sort/nextflow.config
+  tags:
+    - samtools
+    - samtools/sort
+  files:
+    - path: output/samtools/test.sorted.bam
+      md5sum: c828232048a6880984d7be0fd1489837
+    - path: output/samtools/test.sorted.bam.csi
+      md5sum: 9f49045f0cd1feb2bee10c8b22fea9af
